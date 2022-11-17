@@ -442,3 +442,7 @@ end)
 Section8:NewButton("Key for that hack (click pin) ", "very op", function()
     setclipboard("https://t.me/MODGAMEVN6789")
 end)
+
+Section5:NewButton("Corrupt Door", "useless ", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
+end)
