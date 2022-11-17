@@ -447,6 +447,11 @@ Section5:NewButton("Corrupt Door", "useless ", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
 end)
 
+local Tab7 = Window:NewTab("Pet Simulator X")
+local Section9 = Tab7:NewSection("Pet Simulator X")
 
+Section9:NewButton("Pet Sim X Hoho Hub", "very good", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
     
 
