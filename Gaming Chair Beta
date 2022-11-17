@@ -414,3 +414,31 @@ end
 end
 end)
 end)
+
+local Tab6 = Window:NewTab("Ramdom :)")
+local Section8 = Tab6:NewSection("If you dont want is just dont click")
+
+Section8:NewButton("Dont click", "DONT CLICK", function()
+   local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
+notifications:notify{
+    Title = "Why do you click this",
+    Description = "Type /console in chat",
+    Accept = {
+        Text = "Ok"
+    },
+    Length = 10
+}
+print("Get troll :)")
+end)
+
+Section8:NewButton("CODM Hack Garenal", "yes (troll) ", function()
+    setclipboard("https://t.me/trungthaicodm/304620")
+end)
+
+Section8:NewButton("CODM Hack Global", "👀", function()
+    setclipboard("https://t.me/trungthaicodm/312553")
+end)
+
+Section8:NewButton("Key for that hack (click pin) ", "very op", function()
+    setclipboard("https://t.me/MODGAMEVN6789")
+end)
