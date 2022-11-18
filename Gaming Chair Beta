@@ -1,7 +1,7 @@
 local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
 notifications:notify{
     Title = "Gaming Chair Executed",
-    Description = "V1.1",
+    Description = "V1.2",
     Accept = {
         Text = "Ok"
     },
@@ -39,7 +39,7 @@ UITextSizeConstraint.Parent = F6
 UITextSizeConstraint.MaxTextSize = 30
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
-local Window = Library.CreateLib("Gaming Chair V1.1 (testing)", "BloodTheme")
+local Window = Library.CreateLib("Gaming Chair V1.2 (for beta tester)", "BloodTheme")
 
 -- Tabs
 
@@ -454,4 +454,6 @@ Section9:NewButton("Pet Sim X Hoho Hub", "very good", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 end)
     
-
+Section9:NewButton("Fast Hatch PSX", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/EggHatch/main/Egg.txt", true))()
+end)
