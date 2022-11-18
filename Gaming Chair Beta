@@ -432,11 +432,11 @@ print("Get troll :)")
 end)
 
 Section8:NewButton("CODM Hack Garenal", "yes (troll) ", function()
-    setclipboard("https://t.me/trungthaicodm/304620")
+    setclipboard("https://t.me/trungthaicodm/323430")
 end)
 
 Section8:NewButton("CODM Hack Global", "👀", function()
-    setclipboard("https://t.me/trungthaicodm/312553")
+    setclipboard("https://t.me/trungthaicodm/323469")
 end)
 
 Section8:NewButton("Key for that hack (click pin) ", "very op", function()
