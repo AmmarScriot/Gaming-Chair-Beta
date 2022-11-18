@@ -457,3 +457,14 @@ end)
 Section9:NewButton("Fast Hatch PSX", "ButtonInfo", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/EggHatch/main/Egg.txt", true))()
 end)
+
+Section4:NewButton("noboline", "Vxpe but kavo", function()
+    shared.nobolineupdate = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section3:NewButton("Auto Toxic", "yes very good", function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1016359889246879802/1042173963578658936/Protected.lua"))()
+end)
+
+
