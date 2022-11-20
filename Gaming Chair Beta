@@ -41,18 +41,71 @@ UITextSizeConstraint.MaxTextSize = 30
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
 local Window = Library.CreateLib("Gaming Chair V1.2 (for beta tester)", "BloodTheme")
 
--- Tabs
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
+local Window = Library.CreateLib("Gaming Chair V1.2 (new ui soon)", "BloodTheme")
 
 local Tab1 = Window:NewTab("Credits")
-local Section1 = Tab1:NewSection("Help by V4MP6RE | Script Dev#6350")
-local Section2 = Tab1:NewSection("Make by ammar#2789")
-
 local Tab2 = Window:NewTab("Main")
-local Section3 = Tab2:NewSection("Main")
+local Tab3 = Window:NewTab("Bedwars")
+local Tab4 = Window:NewTab("Door")
+local Tab5 = Window:NewTab("Blox Fruit")
+local Tab6 = Window:NewTab("Pet Simulator X")
+local Tab7 = Window:NewTab("Ramdom")
+local Tab8 = Window:NewTab("My Restaurant")
 
---button 
+local Section1 = Tab1:NewSection("Help by V4MP6RE | Script Dev#6350")
+local Section2 = Tab1:NewSection("UI code by Ash01#0947")
+local Section3 = Tab1:NewSection("Make by ammar#2789")
 
-Section3:NewButton("Inf Jump", "Best for obby", function()
+Section3:NewKeybind("Toggle ui", "Toogle the ui lol", Enum.KeyCode.F6, function()
+    Library:ToggleUI()
+end)
+
+Section3:NewButton("Discord Server", "Hey JOIN THE SERVER OR YOUR DON'T GET BETA TESTER", function()
+    setclipboard("https://discord.gg/Rqqbcm3W")
+end)
+
+Section3:NewButton("If you want the button click this", "Hehe", function()
+    local ScreenGui = Instance.new("ScreenGui")
+local F6 = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+F6.Name = "F6"
+F6.Parent = ScreenGui
+F6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+F6.BackgroundTransparency = 0.500
+F6.Position = UDim2.new(0.806384563, 0, 0.0453872904, 0)
+F6.Size = UDim2.new(0.159186631, 0, 0.285657197, 0)
+F6.Font = Enum.Font.SourceSans
+F6.Text = "😐"
+F6.TextColor3 = Color3.fromRGB(0, 0, 0)
+F6.TextScaled = true
+F6.TextSize = 30.000
+F6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+F6.TextStrokeTransparency = 0.000
+F6.TextWrapped = true
+F6.MouseButton1Down:Connect(function()
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" ,false ,game)
+end)
+
+UITextSizeConstraint.Parent = F6
+UITextSizeConstraint.MaxTextSize = 30
+end)
+
+local Section4 = Tab2:NewSection("Main")
+local Section5 = Tab3:NewSection("Bedwars")
+local Section6 = Tab4:NewSection("Door")
+local Section7 = Tab5:NewSection("Blox Fruit")
+local Section8 = Tab6:NewSection("Pet Simulator X")
+local Section9 = Tab7:NewSection("If you dont want to click this so dont click")
+local Section10 = Tab8:NewSection("My Restaurant")
+
+Section4:NewButton("Inf Jump", "Best for obby", function()
     local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
@@ -61,51 +114,23 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)
 end)
 
-Section3:NewButton("Keyboards ", "Best", function()
+Section4:NewButton("Keyboards ", "Best", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end) 
 
-Section3:NewButton("Fly ", "Best", function()
+Section4:NewButton("Fly ", "Best", function()
     loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
 end) 
 
-local Tab3 = Window:NewTab("Bedwars")
-local Section4 = Tab3:NewSection("bedwars")
-
-Section4:NewButton("Vxpe", "config", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end)
-
-local Tab4 = Window:NewTab("Doors")
-local Section5 = Tab4:NewSection("Doors")
-
-Section5:NewButton("Door Darkrai X", "first door script and best", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
-end)
-
-Section3:NewButton("Fly but Better", "sus", function()
+Section4:NewButton("Fly but Better", "sus", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FEZEUJSR/flyguiByMe/main/fly.txt"))()
 end)
 
-Section3:NewButton("Infinity yield ", "sus", function()
+Section4:NewButton("Infinity yield ", "sus", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
-Section4:NewButton("JN HH bedwars", "sus", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/JN-HH-Gaming-Pro/main/JN%20HH%20Gaming%20Pro",true))()
-end)
-
-Section4:NewButton("Darkrai X bedwars", "sus", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Bedwars"))()
-end)
-
-local Section6 = Tab1:NewSection("Ui Code by Ash01#0947")
-
-Section6:NewKeybind("Toggle ui", "Toogle the ui lol", Enum.KeyCode.F6, function()
-    Library:ToggleUI()
-end)
-
-Section3:NewButton("shiftlock", "sus", function()
+Section4:NewButton("shiftlock", "sus", function()
 -- Gui to Lua
 -- Version: 3.2
 
@@ -343,58 +368,7 @@ end
 coroutine.wrap(OMQRQRC_fake_script)()
 end)
 
-local Tab5 = Window:NewTab("Blox Fruit ")
-local Section7 = Tab5:NewSection("Blox Fruit")
-
-Section7:NewButton("Hoho Hub", "yes", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-end)
-
-Section7:NewButton("Red Hub", "Haha", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
-end)
-
-Section6:NewButton("copy the discord link", "now for the sneak peak", function()
-    setclipboard("https://discord.gg/TcA6HJBD")
-end)
-
-Section6:NewButton("If the button gone click this", "yes", function()
-    local ScreenGui = Instance.new("ScreenGui")
-local F6 = Instance.new("TextButton")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-F6.Name = "F6"
-F6.Parent = ScreenGui
-F6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-F6.BackgroundTransparency = 0.500
-F6.Position = UDim2.new(0.806384563, 0, 0.0453872904, 0)
-F6.Size = UDim2.new(0.159186631, 0, 0.285657197, 0)
-F6.Font = Enum.Font.SourceSans
-F6.Text = "👀Beta Tester👀"
-F6.TextColor3 = Color3.fromRGB(0, 0, 0)
-F6.TextScaled = true
-F6.TextSize = 30.000
-F6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-F6.TextStrokeTransparency = 0.000
-F6.TextWrapped = true
-F6.MouseButton1Down:Connect(function()
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" ,false ,game)
-end)
-
-UITextSizeConstraint.Parent = F6
-UITextSizeConstraint.MaxTextSize = 30
-end)
-
-Section7:NewButton("Zen Hub", "Very Good", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
-end)
-
-Section3:NewButton("Hitbox (few game work) ", "sus", function()
+Section4:NewButton("Hitbox (few game work) ", "sus", function()
     _G.HeadSize = 20
 _G.Disabled = true
 
@@ -415,10 +389,56 @@ end
 end)
 end)
 
-local Tab6 = Window:NewTab("Ramdom :)")
-local Section8 = Tab6:NewSection("If you dont want is just dont click")
+Section4:NewButton("Auto Toxic", "yes very good", function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1016359889246879802/1042173963578658936/Protected.lua"))()
+end)
 
-Section8:NewButton("Dont click", "DONT CLICK", function()
+Section5:NewButton("Vxpe", "config", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section5:NewButton("JN HH bedwars", "sus", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/JN-HH-Gaming-Pro/main/JN%20HH%20Gaming%20Pro",true))()
+end)
+
+Section5:NewButton("Darkrai X bedwars", "sus", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Bedwars"))()
+end)
+
+Section5:NewButton("noboline", "Vxpe but kavo", function()
+    shared.nobolineupdate = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section6:NewButton("Door Darkrai X", "first door script and best", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+end)
+
+Section6:NewButton("Corrupt Door", "useless ", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
+end)
+
+Section7:NewButton("Hoho Hub", "yes", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+Section7:NewButton("Red Hub", "Haha", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+end)
+
+Section8:NewButton("Pet Sim X Hoho Hub", "very good", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+Section8:NewButton("Fast Hatch PSX", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/EggHatch/main/Egg.txt", true))()
+end)
+
+Section8:NewButton("Plantom Hub PSX", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
+end)
+
+Section9:NewButton("Dont click", "DONT CLICK", function()
    local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
 notifications:notify{
     Title = "Why do you click this",
@@ -431,40 +451,23 @@ notifications:notify{
 print("Get troll :)")
 end)
 
-Section8:NewButton("CODM Hack Garenal", "yes (troll) ", function()
+Section9:NewButton("CODM Hack Garenal", "yes (troll) ", function()
     setclipboard("https://t.me/trungthaicodm/323430")
 end)
 
-Section8:NewButton("CODM Hack Global", "👀", function()
+Section9:NewButton("CODM Hack Global", "😂", function()
     setclipboard("https://t.me/trungthaicodm/323469")
 end)
 
-Section8:NewButton("Key for that hack (click pin) ", "very op", function()
+Section9:NewButton("Key for that hack (click pin) ", "very op", function()
     setclipboard("https://t.me/MODGAMEVN6789")
 end)
 
-Section5:NewButton("Corrupt Door", "useless ", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
+Section10:NewButton("Fast NPC", "Auto Farm", function()
+    getgenv().fpsBoost = false
+loadstring(game:HttpGet("https://rawscripts.net/raw/My-Restaurant!-Fast-Autofarm-4610"))()
 end)
 
-local Tab7 = Window:NewTab("Pet Simulator X")
-local Section9 = Tab7:NewSection("Pet Simulator X")
-
-Section9:NewButton("Pet Sim X Hoho Hub", "very good", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+Section5:NewButton("Engoware", "need config", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
 end)
-    
-Section9:NewButton("Fast Hatch PSX", "ButtonInfo", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/EggHatch/main/Egg.txt", true))()
-end)
-
-Section4:NewButton("noboline", "Vxpe but kavo", function()
-    shared.nobolineupdate = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end)
-
-Section3:NewButton("Auto Toxic", "yes very good", function()
-    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1016359889246879802/1042173963578658936/Protected.lua"))()
-end)
-
-
