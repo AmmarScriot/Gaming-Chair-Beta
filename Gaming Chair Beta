@@ -39,9 +39,6 @@ UITextSizeConstraint.Parent = F6
 UITextSizeConstraint.MaxTextSize = 30
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
-local Window = Library.CreateLib("Gaming Chair V1.2 (for beta tester)", "BloodTheme")
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
 local Window = Library.CreateLib("Gaming Chair V1.2 (new ui soon)", "BloodTheme")
 
 local Tab1 = Window:NewTab("Credits")
