@@ -1,499 +1,136 @@
-local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
-notifications:notify{
-    Title = "Gaming Chair Executed",
-    Description = "V1.2",
-    Accept = {
-        Text = "Ok"
-    },
-    Length = 10
-}
-
-local ScreenGui = Instance.new("ScreenGui")
-local F6 = Instance.new("TextButton")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-F6.Name = "F6"
-F6.Parent = ScreenGui
-F6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-F6.BackgroundTransparency = 0.500
-F6.Position = UDim2.new(0.806384563, 0, 0.0453872904, 0)
-F6.Size = UDim2.new(0.159186631, 0, 0.285657197, 0)
-F6.Font = Enum.Font.SourceSans
-F6.Text = "😐"
-F6.TextColor3 = Color3.fromRGB(0, 0, 0)
-F6.TextScaled = true
-F6.TextSize = 30.000
-F6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-F6.TextStrokeTransparency = 0.000
-F6.TextWrapped = true
-F6.MouseButton1Down:Connect(function()
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" ,false ,game)
-end)
-
-UITextSizeConstraint.Parent = F6
-UITextSizeConstraint.MaxTextSize = 30
-
--- Library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mapple7777/UI-Librarys/main/UI-1/UI.lua"))()
-
--- Create Window
-local Window = Library:Create("Gaming Chair","V1.2")
-
--- Tab
-local Tab1 = Window:Tab("Main",true)
-local Tab2 = Window:Tab("Bedwars",true)
-
--- Label
-Tab1:Label("Main")
-
--- Button
-Tab1:Button("Infinity yield",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-end)
-
-Tab1:Button("fly",function()
-    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-end)
-
-Tab1:Button("Keyboard",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
-end)
-
-Tab1:Button("Infinity Jump",function()
-    local InfiniteJumpEnabled = true
-game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
-		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	end
-end)
-end) 
-
-Tab1:Button("Fly but better",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/FEZEUJSR/flyguiByMe/main/fly.txt"))()
-end)
-
-Tab1:Button("shiftlock",function()
-    -- Gui to Lua
+-- Gui to Lua
 -- Version: 3.2
 
 -- Instances:
 
-game.StarterGui:SetCore("SendNotification", {
-
-    Title = "Shiftlock Script";
-
-    Text = "discord.gg/arceus || lixbo";
-
-})
-
-local ShiftlockStarterGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-
---Properties:
-
-ShiftlockStarterGui.Name = "Shiftlock (StarterGui)"
-ShiftlockStarterGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ShiftlockStarterGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ShiftlockStarterGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BackgroundTransparency = 1.000
-ImageButton.Position = UDim2.new(0.921914339, 0, 0.552375436, 0)
-ImageButton.Size = UDim2.new(0.0636147112, 0, 0.0661305636, 0)
-ImageButton.SizeConstraint = Enum.SizeConstraint.RelativeXX
-ImageButton.Image = "http://www.roblox.com/asset/?id=182223762"
-
--- Scripts:
-
-local function TLQOYN_fake_script() -- ImageButton.ShiftGUI 
-	local script = Instance.new('LocalScript', ImageButton)
-
-	local MobileCameraFramework = {}
-	local players = game:GetService("Players")
-	local runservice = game:GetService("RunService")
-	local CAS = game:GetService("ContextActionService")
-	local player = players.LocalPlayer
-	local character = player.Character or player.CharacterAdded:Wait()
-	local root = character:WaitForChild("HumanoidRootPart")
-	local humanoid = character.Humanoid
-	local camera = workspace.CurrentCamera
-	local button = script.Parent
-	
-	--Visiblity
-	uis = game:GetService("UserInputService")
-	ismobile = uis.TouchEnabled
-	button.Visible = ismobile
-	
-	local states = {
-		OFF = "rbxasset://textures/ui/mouseLock_off@2x.png",
-		ON = "rbxasset://textures/ui/mouseLock_on@2x.png"
-	}
-	local MAX_LENGTH = 900000
-	local active = false
-	local ENABLED_OFFSET = CFrame.new(1.7, 0, 0)
-	local DISABLED_OFFSET = CFrame.new(-1.7, 0, 0)
-	local function UpdateImage(STATE)
-		button.Image = states[STATE]
-	end
-	local function UpdateAutoRotate(BOOL)
-		humanoid.AutoRotate = BOOL
-	end
-	local function GetUpdatedCameraCFrame(ROOT, CAMERA)
-		return CFrame.new(root.Position, Vector3.new(CAMERA.CFrame.LookVector.X * MAX_LENGTH, root.Position.Y, CAMERA.CFrame.LookVector.Z * MAX_LENGTH))
-	end
-	local function EnableShiftlock()
-		UpdateAutoRotate(false)
-		UpdateImage("ON")
-		root.CFrame = GetUpdatedCameraCFrame(root, camera)
-		camera.CFrame = camera.CFrame * ENABLED_OFFSET
-	end
-	local function DisableShiftlock()
-		UpdateAutoRotate(true)
-		UpdateImage("OFF")
-		camera.CFrame = camera.CFrame * DISABLED_OFFSET
-		pcall(function()
-			active:Disconnect()
-			active = nil
-		end)
-	end
-	UpdateImage("OFF")
-	active = false
-	function ShiftLock()
-		if not active then
-			active = runservice.RenderStepped:Connect(function()
-				EnableShiftlock()
-			end)
-		else
-			DisableShiftlock()
-		end
-	end
-	local ShiftLockButton = CAS:BindAction("ShiftLOCK", ShiftLock, false, "On")
-	CAS:SetPosition("ShiftLOCK", UDim2.new(0.8, 0, 0.8, 0))
-	button.MouseButton1Click:Connect(function()
-		if not active then
-			active = runservice.RenderStepped:Connect(function()
-				EnableShiftlock()
-			end)
-		else
-			DisableShiftlock()
-		end
-	end)
-	return MobileCameraFramework
-	
-end
-coroutine.wrap(TLQOYN_fake_script)()
-local function OMQRQRC_fake_script() -- ShiftlockStarterGui.LocalScript 
-	local script = Instance.new('LocalScript', ShiftlockStarterGui)
-
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	local Settings = UserSettings()
-	local GameSettings = Settings.GameSettings
-	local ShiftLockController = {}
-	while not Players.LocalPlayer do
-		wait()
-	end
-	local LocalPlayer = Players.LocalPlayer
-	local Mouse = LocalPlayer:GetMouse()
-	local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-	local ScreenGui, ShiftLockIcon, InputCn
-	local IsShiftLockMode = true
-	local IsShiftLocked = true
-	local IsActionBound = false
-	local IsInFirstPerson = false
-	ShiftLockController.OnShiftLockToggled = Instance.new("BindableEvent")
-	local function isShiftLockMode()
-		return LocalPlayer.DevEnableMouseLock and GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.ClickToMove and GameSettings.ComputerMovementMode ~= Enum.ComputerMovementMode.ClickToMove and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.Scriptable
-	end
-	if not UserInputService.TouchEnabled then
-		IsShiftLockMode = isShiftLockMode()
-	end
-	local function onShiftLockToggled()
-		IsShiftLocked = not IsShiftLocked
-		ShiftLockController.OnShiftLockToggled:Fire()
-	end
-	local initialize = function()
-		print("enabled")
-	end
-	function ShiftLockController:IsShiftLocked()
-		return IsShiftLockMode and IsShiftLocked
-	end
-	function ShiftLockController:SetIsInFirstPerson(isInFirstPerson)
-		IsInFirstPerson = isInFirstPerson
-	end
-	local function mouseLockSwitchFunc(actionName, inputState, inputObject)
-		if IsShiftLockMode then
-			onShiftLockToggled()
-		end
-	end
-	local function disableShiftLock()
-		if ScreenGui then
-			ScreenGui.Parent = nil
-		end
-		IsShiftLockMode = false
-		Mouse.Icon = ""
-		if InputCn then
-			InputCn:disconnect()
-			InputCn = nil
-		end
-		IsActionBound = false
-		ShiftLockController.OnShiftLockToggled:Fire()
-	end
-	local onShiftInputBegan = function(inputObject, isProcessed)
-		if isProcessed then
-			return
-		end
-		if inputObject.UserInputType ~= Enum.UserInputType.Keyboard or inputObject.KeyCode == Enum.KeyCode.LeftShift or inputObject.KeyCode == Enum.KeyCode.RightShift then
-		end
-	end
-	local function enableShiftLock()
-		IsShiftLockMode = isShiftLockMode()
-		if IsShiftLockMode then
-			if ScreenGui then
-				ScreenGui.Parent = PlayerGui
-			end
-			if IsShiftLocked then
-				ShiftLockController.OnShiftLockToggled:Fire()
-			end
-			if not IsActionBound then
-				InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
-				IsActionBound = true
-			end
-		end
-	end
-	GameSettings.Changed:connect(function(property)
-		if property == "ControlMode" then
-			if GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch then
-				enableShiftLock()
-			else
-				disableShiftLock()
-			end
-		elseif property == "ComputerMovementMode" then
-			if GameSettings.ComputerMovementMode == Enum.ComputerMovementMode.ClickToMove then
-				disableShiftLock()
-			else
-				enableShiftLock()
-			end
-		end
-	end)
-	LocalPlayer.Changed:connect(function(property)
-		if property == "DevEnableMouseLock" then
-			if LocalPlayer.DevEnableMouseLock then
-				enableShiftLock()
-			else
-				disableShiftLock()
-			end
-		elseif property == "DevComputerMovementMode" then
-			if LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.ClickToMove or LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.Scriptable then
-				disableShiftLock()
-			else
-				enableShiftLock()
-			end
-		end
-	end)
-	LocalPlayer.CharacterAdded:connect(function(character)
-		if not UserInputService.TouchEnabled then
-			initialize()
-		end
-	end)
-	if not UserInputService.TouchEnabled then
-		initialize()
-		if isShiftLockMode() then
-			InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
-			IsActionBound = true
-		end
-	end
-	enableShiftLock()
-	return ShiftLockController
-	
-end
-coroutine.wrap(OMQRQRC_fake_script)()
-end)
-
-Tab1:Button("Hitbox",function()
-    _G.HeadSize = 20
-_G.Disabled = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.Disabled then
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-v.Character.HumanoidRootPart.Transparency = 0.7
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end)
-end
-end
-end
-end)
-end)
-
-Tab1:Button("Auto Toxic",function()
-    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1016359889246879802/1042173963578658936/Protected.lua"))()
-end)
-
-Tab2:Label("Bedwars")
-
-Tab2:Button("Vxpe",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end)
-
-Tab2:Button("JN HH Bedwars",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/JN-HH-Gaming-Pro/main/JN%20HH%20Gaming%20Pro",true))()
-end)
-
-Tab2:Button("Darkrai X Bedwars",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Bedwars"))()
-end)
-
-Tab2:Button("Noboline",function()
-    shared.nobolineupdate = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end)
-
-Tab2:Button("Engoware",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
-end)
-
-local Tab3 = Window:Tab("Door",true)
-Tab3:Label("Door")
-
-Tab3:Button("Darkrai X Door",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
-end)
-
-Tab3:Button("Corrupt Door",function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
-end)
-
-local Tab4 = Window:Tab("Blox Fruit",true)
-Tab4:Label("Blox Fruit")
-
-Tab4:Button("HoHo Hub",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-end)
-
-Tab4:Button("Red Hub",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
-end)
-
-local Tab5 = Window:Tab("Pet Simulator X",true)
-Tab5:Label("PSX")
-
-Tab5:Button("HoHo Hub Pet Sim X",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-end)
-
-Tab5:Button("Fast Hatch PSX",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/EggHatch/main/Egg.txt", true))()
-end)
-
-Tab5:Button("Plantom Hub PSX",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
-end)
-
-Tab5:Button("Zeerox Hub PSX",function()
-    loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
-end)
-
-local Tab6 = Window:Tab("My Restaurant",true)
-Tab6:Label("My Restaurant")
-
-Tab6:Button("Fast NPC aka Auto Farm",function()
-    getgenv().fpsBoost = false
-loadstring(game:HttpGet("https://rawscripts.net/raw/My-Restaurant!-Fast-Autofarm-4610"))()
-end)
-
-local Tab7 = Window:Tab("Random :)",true)
-Tab7:Label("If you dont want dont click")
-
-Tab7:Button("Dont Click",function()
-    local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
-notifications:notify{
-    Title = "Why do you click this",
-    Description = "Type /console in chat",
-    Accept = {
-        Text = "Ok"
-    },
-    Length = 10
-}
-print("Get troll :) but why you click this?")
-end)
-
-Tab7:Button("CODM Garena hack",function()
-    setclipboard("https://t.me/trungthaicodm/323430")
-end)
-
-Tab7:Button("CODM Global hack",function()
-    setclipboard("https://t.me/trungthaicodm/323469")
-end)
-
-Tab7:Button("Key for that hack",function()
-    setclipboard("https://t.me/MODGAMEVN6789")
-end)
-
-local Tab8 = Window:Tab("Da Hood",true)
-Tab8:Label("Da Hood")
-
-Tab8:Button("Nukermode",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))()
-end)
-
-Tab8:Button("Swagmode",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
-end)
-
-Tab8:Button("Pwner Hub",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))();
-end)
-
-local Tab9 = Window:Tab("Misc",true)
-Tab9:Label("Misc")
-
-Tab9:Button("Join NOW!",function()
-    setclipboard("https://discord.gg/Rqqbcm3W")
-end)
-
-Tab9:Button("If The Button gone click this",function()
-    local ScreenGui = Instance.new("ScreenGui")
-local F6 = Instance.new("TextButton")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local KeyBox = Instance.new("TextBox")
+local GetKey = Instance.new("TextButton")
+local Enter = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-F6.Name = "F6"
-F6.Parent = ScreenGui
-F6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-F6.BackgroundTransparency = 0.500
-F6.Position = UDim2.new(0.806384563, 0, 0.0453872904, 0)
-F6.Size = UDim2.new(0.159186631, 0, 0.285657197, 0)
-F6.Font = Enum.Font.SourceSans
-F6.Text = "😐"
-F6.TextColor3 = Color3.fromRGB(0, 0, 0)
-F6.TextScaled = true
-F6.TextSize = 30.000
-F6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-F6.TextStrokeTransparency = 0.000
-F6.TextWrapped = true
-F6.MouseButton1Down:Connect(function()
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" ,false ,game)
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(161, 214, 255)
+Frame.Position = UDim2.new(0.370578766, 0, 0.300341278, 0)
+Frame.Size = UDim2.new(0, 487, 0, 208)
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = Frame
+KeyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Position = UDim2.new(0.215605766, 0, 0.211538464, 0)
+KeyBox.Size = UDim2.new(0, 277, 0, 50)
+KeyBox.Font = Enum.Font.SourceSans
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.TextSize = 14.000
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Frame
+GetKey.BackgroundColor3 = Color3.fromRGB(255, 112, 112)
+GetKey.Position = UDim2.new(0.264887065, 0, 0.528846145, 0)
+GetKey.Size = UDim2.new(0, 228, 0, 33)
+GetKey.Font = Enum.Font.LuckiestGuy
+GetKey.LineHeight = 0.750
+GetKey.Text = "GET KEY"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextSize = 22.000
+GetKey.MouseButton1Click:Connect(function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Copied!"; Text = "PASTE IT ON SEARCH !"; Icon = "rbxassetid://9327507243"; Duration = 10 })
+	wait(0.7)
+	setclipboard("https://controlc.com/4a66e585")
 end)
 
-UITextSizeConstraint.Parent = F6
-UITextSizeConstraint.MaxTextSize = 30
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.BackgroundColor3 = Color3.fromRGB(78, 197, 72)
+Enter.Position = UDim2.new(0.264887065, 0, 0.745192349, 0)
+Enter.Size = UDim2.new(0, 228, 0, 34)
+Enter.Font = Enum.Font.LuckiestGuy
+Enter.LineHeight = 0.750
+Enter.Text = "ENTER"
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextSize = 19.000
+Enter.MouseButton1Click:Connect(function()
+if KeyBox.Text == "GamingChairV1.3" then
+		Frame.Visible = false
+		wait(0.5)
+		loadstring(game:HttpGet("https://pastebin.com/raw/rZq5sJBM"))()
+	end
 end)
 
-Tab9:Keybind("Button",Enum.KeyCode.F6,function()
-    Library:Toggle()
-end)
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.293634474, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Bangers
+TextLabel.Text = "Gaming Chair"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 22.000
+
+-- Scripts:
+
+local function LLCZL_fake_script() -- Frame.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(LLCZL_fake_script)()
